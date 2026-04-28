@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/img/logo/asela_garage_exact.png";
+import logo from "../../../assets/img/logo/logo-3.png";
 import "./Footer.css"; // Make sure to import your CSS file
 
 function Footer() {
@@ -90,7 +90,7 @@ function Footer() {
                   <div className="ltn__blog-meta">
                     <ul>
                       <li className="ltn__blog-date">
-                        <i className="far fa-envelope"></i> February 23, 2026
+                        <i className="far fa-envelope"></i> May 5, 2026
                       </li>
                     </ul>
                   </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container, Button, Dropdown } from "react-bootstrap";
-import logo from "../../../assets/img/logo/asela_garage_exact.png";
+import logo from "../../../assets/img/logo/logo.png";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 import { FaUserCircle, FaEdit, FaSignOutAlt } from "react-icons/fa";
