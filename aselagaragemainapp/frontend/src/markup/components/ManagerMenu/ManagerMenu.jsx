@@ -21,12 +21,7 @@ function ManagerMenu() {
         <Link to="/manager" className="list-group-item">
           <FaTachometerAlt className="icon" /> Dashboard
         </Link>
-        <Link to="/manager/orders" className="list-group-item">
-          <FaBox className="icon" /> Orders
-        </Link>
-        <Link to="/manager/new-order" className="list-group-item">
-          <FaPlus className="icon" /> New Order
-        </Link>
+
         <Link to="/manager/employees" className="list-group-item">
           <FaUsers className="icon" /> Employees
         </Link>

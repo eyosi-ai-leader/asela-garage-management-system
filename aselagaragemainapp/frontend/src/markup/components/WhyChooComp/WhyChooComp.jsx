@@ -2,7 +2,7 @@ import React from "react";
 import imgOther1 from "../../../Assets/ServicesImg/ServiceImg6.png";
 import imgOther2 from "../../../Assets/ServicesImg/ServiceImg2.png";
 import { Link } from "react-router-dom";
-import "./WhyChooComp.css";
+import "./whychoocomp.css"; // ✅ FIXED: match filename exactly
 
 function WhyChooComp() {
   return (
@@ -24,6 +24,7 @@ function WhyChooComp() {
                   have you covered.
                 </p>
               </div>
+
               <div className="row">
                 <div className="col-lg-12 col-md-6">
                   <div className="why-choose-us-feature-item">
@@ -42,6 +43,7 @@ function WhyChooComp() {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-lg-12 col-md-6">
                   <div className="why-choose-us-feature-item">
                     <div className="why-choose-us-feature-icon">
@@ -62,6 +64,7 @@ function WhyChooComp() {
               </div>
             </div>
           </div>
+
           <div className="col-lg-6">
             <div className="why-choose-us-img-wrap">
               <div className="why-choose-us-img-1 text-left">

@@ -15,8 +15,8 @@ function AboutUs() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    // Check if count is less than 42
-    if (count < 42) {
+    // Check if count is less than 25
+    if (count < 25) {
       // Set a timeout to increment the count every 100 milliseconds
       const timer = setTimeout(() => {
         setCount(count + 1);
@@ -179,7 +179,7 @@ function AboutUs() {
                   Get Amazing Service From Us<span>.</span>
                 </h1>
                 <p>
-                  At Abe Garage, we pride ourselves on delivering top-quality
+                  At Asela Garage, we pride ourselves on delivering top-quality
                   automotive services. Our team of skilled technicians is
                   dedicated to keeping your vehicle running smoothly and
                   efficiently.
@@ -196,7 +196,7 @@ function AboutUs() {
                 full-scale repair, you can trust us to provide exceptional
                 service and customer care. We strive to make your experience as
                 convenient as possible, offering flexible scheduling and
-                transparent pricing. Let Abe Garage be your go-to destination
+                transparent pricing. Let Asela Garage be your go-to destination
                 for all your automotive needs.
               </p>
               <hr />
@@ -216,9 +216,9 @@ function AboutUs() {
                     .
                   </p>
                   <h2>
-                    <Link to="tel:+123456789">507-452-1254</Link>{" "}
+                    <Link to="tel:+123456789">+25109090909</Link>{" "}
                     <small> or </small>{" "}
-                    <Link to="tel:+123456789">508-452-1253</Link>
+                    <Link to="tel:+123456789">+25107070707</Link>
                   </h2>
                 </div>
               </div>

@@ -1,43 +1,3 @@
-// import React from 'react';
-
-// function AdminMenu(props) {
-//   return (
-//     <div>
-//       <div className="admin-menu">
-//         <h2>Admin Menu</h2>
-//       </div>
-//       <div className="list-group">
-//         <a href="/admin-dashboard" className="list-group-item">
-//           Dashboard
-//         </a>
-//         <a href="/admin/orders" className="list-group-item">
-//           Orders
-//         </a>
-//         <a href="/admin/order" className="list-group-item">
-//           New order
-//         </a>
-//         <a href="/admin/add-employee" className="list-group-item">
-//           Add employee
-//         </a>
-//         <a href="/admin/employees" className="list-group-item">
-//           Employees
-//         </a>
-//         <a href="/admin/add-customer" className="list-group-item">
-//           Add customer
-//         </a>
-//         <a href="/admin/customers" className="list-group-item">
-//           Customers
-//         </a>
-//         <a href="/admin/services/add" className="list-group-item">
-//           Services
-//         </a>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default AdminMenu;
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -96,24 +56,14 @@ function AdminMenu() {
         </Link>
 
         {/* Orders menu item with toggle functionality */}
-        <div className="list-group-item" onClick={toggleOrdersMenu}>
+        {/* <div className="list-group-item" onClick={toggleOrdersMenu}>
           <FaBox className="icon" /> Orders
           <span className="expand-icon">
             {isOrdersOpen ? <FaAngleUp /> : <FaAngleDown />}
           </span>
-        </div>
+        </div> */}
 
         {/* Conditional rendering of orders sub-menu items */}
-        {isOrdersOpen && (
-          <div className="sub-menu">
-            <Link to="/admin/new-order" className="list-group-item">
-              <FaUserPlus className="icon" /> New Order
-            </Link>
-            <Link to="/admin/orders" className="list-group-item">
-              <FaUser className="icon" /> View Orders
-            </Link>
-          </div>
-        )}
 
         {/* Employees menu item with toggle functionality */}
         <div className="list-group-item" onClick={toggleEmployeesMenu}>

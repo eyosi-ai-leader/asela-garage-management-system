@@ -78,7 +78,7 @@ function ServicePage() {
                     We are Qualified & Professional<span>.</span>
                   </h1>
                   <p>
-                    At [Company Name], we take pride in delivering top-quality
+                    At Asela Garage, we take pride in delivering top-quality
                     services with a team of certified professionals. Our
                     commitment to excellence ensures that every project is
                     completed to the highest standards.
@@ -138,24 +138,26 @@ function ServicePage() {
                   <i className="icon-maintenance-1"></i>
                 </div>
                 <div className="service-item-brief">
-                  <h6 className="ltn__secondary-color">// Tire and wheel</h6>
+                  <h6 className="ltn__secondary-color">
+                    // Engine & Mechanical Repair
+                  </h6>
                   <h3>
                     <a href="service-details.html">
-                      There are many variations of passages of Lorem.
+                      Reliable engine and mechanical repair services
                     </a>
                   </h3>
                   <ul>
                     <li>
-                      <span>//</span> Tire puncher with cleaning
+                      <span>//</span> Engine diagnostics and repairs
                     </li>
                     <li>
-                      <span>//</span> Tire Customization
+                      <span>//</span> Transmission services
                     </li>
                     <li>
-                      <span>//</span> Tire check & fixing
+                      <span>//</span> oil changes and fluid checks
                     </li>
                     <li>
-                      <span>//</span> Tire change & color
+                      <span>//</span> preventive maintenance services
                     </li>
                   </ul>
                 </div>
@@ -168,25 +170,25 @@ function ServicePage() {
                 </div>
                 <div className="service-item-brief">
                   <h6 className="ltn__secondary-color">
-                    // Drivability problems
+                    // Electrical Systems & Diagnostics
                   </h6>
                   <h3>
                     <a href="service-details.html">
-                      majority have suffered alteration in some form.
+                      Electrical systems and diagnostics services
                     </a>
                   </h3>
                   <ul>
                     <li>
-                      <span>//</span> Tire puncher with cleaning
+                      <span>//</span> Battery testing and replacement
                     </li>
                     <li>
-                      <span>//</span> Tire Customization
+                      <span>//</span> Wiring harness inspection
                     </li>
                     <li>
-                      <span>//</span> Tire check & fixing
+                      <span>//</span> Alternator and starter services
                     </li>
                     <li>
-                      <span>//</span> Tire change & color
+                      <span>//</span> Diagnostic testing
                     </li>
                   </ul>
                 </div>
@@ -203,7 +205,7 @@ function ServicePage() {
                   </h6>
                   <h3>
                     <a href="service-details.html">
-                      Excellece in automotive services since 1996.
+                      Excellence in automotive services since 1993.
                     </a>
                   </h3>
                   <ul>
@@ -229,24 +231,26 @@ function ServicePage() {
                   <i className="icon-car-parts"></i>
                 </div>
                 <div className="service-item-brief">
-                  <h6 className="ltn__secondary-color">// Tire and wheel</h6>
+                  <h6 className="ltn__secondary-color">
+                    // Electrical Systems & Diagnostics
+                  </h6>
                   <h3>
                     <a href="service-details.html">
-                      There are many variations of passages of Lorem.
+                      Electrical systems and diagnostics services
                     </a>
                   </h3>
                   <ul>
                     <li>
-                      <span>//</span> Tire puncher with cleaning
+                      <span>//</span> Battery testing and replacement
                     </li>
                     <li>
-                      <span>//</span> Tire Customization
+                      <span>//</span> Wiring harness inspection
                     </li>
                     <li>
-                      <span>//</span> Tire check & fixing
+                      <span>//</span> Alternator and starter services
                     </li>
                     <li>
-                      <span>//</span> Tire change & color
+                      <span>//</span> Diagnostic testing
                     </li>
                   </ul>
                 </div>
@@ -263,21 +267,21 @@ function ServicePage() {
                   </h6>
                   <h3>
                     <a href="service-details.html">
-                      majority have suffered alteration in some form.
+                      Electrical systems and diagnostics services
                     </a>
                   </h3>
                   <ul>
                     <li>
-                      <span>//</span> Tire puncher with cleaning
+                      <span>//</span> Battery testing and replacement
                     </li>
                     <li>
-                      <span>//</span> Tire Customization
+                      <span>//</span> Wiring harness inspection
                     </li>
                     <li>
-                      <span>//</span> Tire check & fixing
+                      <span>//</span> Alternator and starter services
                     </li>
                     <li>
-                      <span>//</span> Tire change & color
+                      <span>//</span> Diagnostic testing
                     </li>
                   </ul>
                 </div>
@@ -294,7 +298,7 @@ function ServicePage() {
                   </h6>
                   <h3>
                     <a href="service-details.html">
-                      Excellece in automotive services since 1996.
+                      Excellence in automotive services since 1993.
                     </a>
                   </h3>
                   <ul>

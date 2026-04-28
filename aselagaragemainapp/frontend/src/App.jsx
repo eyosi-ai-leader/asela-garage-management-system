@@ -37,10 +37,9 @@ import CustomerProfile from "./markup/pages/Customer/MyProfileList/MyProfileList
 
 import Unauthorized from "../src/markup/pages/Unauthorized";
 import PrivateAuthRoute from "../src/markup/components/Auth/PrivateAuthRoute";
-// // import orders customers employees pages
-import Orders from "../src/markup/pages/admin/Orders";
+
 // import the chatbot
-// import Chatbot from "./markup/Chatbot_AI/Chatbot/Chatbot";
+import Chatbot from "./markup/Chatbot_AI/Chatbot/Chatbot";
 
 // // Import the css files
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -55,22 +54,14 @@ function App() {
   return (
     <>
       <Header />
+      <Chatbot />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
         {/* <Route path="/chatbot" element={<Chatbot />} />   */}
-        {/* admin pages */}
 
-        <Route
-          path="/admin/orders"
-          element={
-            <PrivateAuthRoute roles={[1, 2, 3]}>
-              {" "}
-              <Orders />
-            </PrivateAuthRoute>
-          }
-        />
+          {/* Admin pages */}
         <Route
           path="/admin/add-service"
           element={
@@ -187,36 +178,54 @@ function App() {
         />
 
         {/* Employee page */}
-        <Route path="/" element={
-          <PrivateAuthRoute roles={[1]}>
-            <Navigate to="/employees" />
-          </PrivateAuthRoute>
-        } />
-        <Route path="/employees/tasks" element={
-          <PrivateAuthRoute roles={[1]}>
-            <EmployeeTasks />
-          </PrivateAuthRoute>
-        } />
-        <Route path="/employees/profile" element={
-          <PrivateAuthRoute roles={[1]}>
-            <EmployeePofile />
-          </PrivateAuthRoute>
-        } />
-        <Route path="/employees/settings" element={
-          <PrivateAuthRoute roles={[1]}>
-            <EmployeeSetting />
-          </PrivateAuthRoute>
-        } />
-        <Route path="/employees/task-history" element={
-          <PrivateAuthRoute roles={[1]}>
-            <TaskHistory />
-          </PrivateAuthRoute>
-        } />
-        <Route path="/employees" element={
-          <PrivateAuthRoute roles={[1]}>
-            <EmployeeDash />
-          </PrivateAuthRoute>
-        } />
+        <Route
+          path="/"
+          element={
+            <PrivateAuthRoute roles={[1]}>
+              <Navigate to="/employees" />
+            </PrivateAuthRoute>
+          }
+        />
+        <Route
+          path="/employees/tasks"
+          element={
+            <PrivateAuthRoute roles={[1]}>
+              <EmployeeTasks />
+            </PrivateAuthRoute>
+          }
+        />
+        <Route
+          path="/employees/profile"
+          element={
+            <PrivateAuthRoute roles={[1]}>
+              <EmployeePofile />
+            </PrivateAuthRoute>
+          }
+        />
+        <Route
+          path="/employees/settings"
+          element={
+            <PrivateAuthRoute roles={[1]}>
+              <EmployeeSetting />
+            </PrivateAuthRoute>
+          }
+        />
+        <Route
+          path="/employees/task-history"
+          element={
+            <PrivateAuthRoute roles={[1]}>
+              <TaskHistory />
+            </PrivateAuthRoute>
+          }
+        />
+        <Route
+          path="/employees"
+          element={
+            <PrivateAuthRoute roles={[1]}>
+              <EmployeeDash />
+            </PrivateAuthRoute>
+          }
+        />
 
         {/* Customer Pages */}
         <Route

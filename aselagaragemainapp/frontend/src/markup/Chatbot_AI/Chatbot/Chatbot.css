@@ -21,7 +21,7 @@ body {
   width: 50px;
   border: none;
   outline: none;
-  background: #6d4fc2;
+  background: #0D6EFD;
   border-radius: 50%;
   cursor: pointer;
   box-shadow:
@@ -51,7 +51,7 @@ body {
 .chatbot-popup {
   display: flex;
   flex-direction: column; /* allow chat-body to grow */
-  height: 530px;
+  height: 510px;
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -78,7 +78,7 @@ body {
   padding: 15px 22px;
   align-items: center;
   justify-content: space-between;
-  background: #6d4fc2;
+  background: #0D6EFD;
 }
 .chat-header .header-info {
   display: flex;
@@ -90,7 +90,7 @@ body {
   width: 35px;
   padding: 6px;
   flex-shrink: 0;
-  fill: #6d4fc2;
+  fill: #0D6EFD;
   background: #fff;
   border-radius: 50%;
 }
@@ -114,7 +114,7 @@ body {
   transition: 0.2s ease;
 }
 .chat-header button:hover {
-  background: #593bab;
+  background: #0D6EFD;
 }
 
 /* BODY FIX */
@@ -142,7 +142,7 @@ body {
   align-self: flex-end;
   margin-bottom: 2px;
   fill: #fff;
-  background: #6d4fc2;
+  background: #0D6EFD;
   border-radius: 50%;
 }
 .chat-body .message .message-text {
@@ -161,7 +161,7 @@ body {
   align-items: flex-end;
 }
 .chat-body .user-message .message-text {
-  background: #6d4fc2;
+  background: #0D6EFD;
   color: #fff;
   border-radius: 13px 13px 3px 13px;
 }
@@ -179,11 +179,11 @@ body {
   align-items: center;
   background: #fff;
   border-radius: 32px;
-  outline: 1px solid 32px;
+  outline: 1px solid #ddd;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06);
 }
 .chat-footer .chat-form:focus-within {
-  outline: 2px solid #6d4fc2;
+  outline: 2px solid #0D6EFD;
 }
 .chat-form .message-input {
   border: none;
@@ -193,6 +193,12 @@ body {
   width: 100%;
   padding: 0 17px;
   font-size: 0.95rem;
+}
+.chat-form .message-input:focus,
+.chat-form .message-input:invalid {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 .chat-form button {
   height: 35px;
@@ -206,11 +212,11 @@ body {
   flex-shrink: 0;
   margin-right: 6px;
   border-radius: 50%;
-  background: #6d4fc2;
+  background: #0D6EFD;
   transition: 0.2s ease;
 }
 .chat-form button:hover {
-  background: #593bab;
+  background: #0D6EFD;
 }
 .chat-form .message-input:valid ~ button {
   display: block;
@@ -241,3 +247,4 @@ body {
     padding: 10px 15px 15px;
   }
 }
+

@@ -3,10 +3,10 @@ import Chatboticon from "../Chatbot_Icon/Chatbot_icon";
 import Chatform from "../Chatform/Chatform";
 import ChatMessage from "../ChatMessage/ChatMessage";
 import "./Chatbot.css";
-// import { companyInfo } from "../CompanyInfo/CompanyInfo";
+import { companyInfo } from "../CompanyInfo/CompanyInfo";
 
 const OPENROUTER_API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
-const VITE_OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
+const VITE_OPENROUTER_API_URL = import.meta.env.VITE_OPENROUTER_API_URL;
 
 const Chatbot = () => {
   const [chatHistory, setChatHistory] = useState([]); // empty initially
@@ -38,7 +38,18 @@ const Chatbot = () => {
           model: "openai/gpt-3.5-turbo",
           messages: [
             // inject companyInfo as context
-            { role: "system", content: companyInfo },
+            // { role: "system", content: companyInfo },
+            {
+              role: "system",
+              content: `
+  You are a helpful AI assistant.
+  If the user's question is related to our company, use the information below.
+  If it is not related to the company, answer normally like ChatGPT.
+
+  Company Information:
+  ${companyInfo}
+  `,
+            },
             { role: "user", content: lastUserMessage.text },
           ],
         }),

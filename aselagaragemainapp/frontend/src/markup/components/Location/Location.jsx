@@ -16,22 +16,22 @@ function Location() {
               <div className="location animated fadeInUp">
                 <FaMapMarkerAlt size={20} className="location-icon" />
                 <div className="location-text">
-                  <h4>ABE-Garage ADDIS ABABA</h4>
-                  <p>Bole Street, Wareda 05, FL 33125</p>
+                  <h4>Asela-Garage Asela City</h4>
+                  <p>Kebele 05, Near Asella Stadium</p>
                 </div>
               </div>
               <div className="location animated fadeInUp delay-1s">
                 <FaMapMarkerAlt size={20} className="location-icon" />
                 <div className="location-text">
-                  <h4>ABE-Garage Chicago </h4>
-                  <p>5401 N Lakewood Ave, Chicago, IL 60640</p>
+                  <h4>Asela-Garage Huruta Town </h4>
+                  <p>Kebele 02, Huruta Market Area</p>
                 </div>
               </div>
               <div className="location animated fadeInUp delay-2s">
                 <FaMapMarkerAlt size={20} className="location-icon" />
                 <div className="location-text">
-                  <h4>ABE-Garage Seattle </h4>
-                  <p>2925 Washington St, Seattle, WA 98104-2465</p>
+                  <h4>Asela-Garage Eteya </h4>
+                  <p>Kebele 01, Near Eteya Bus Station </p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container, Button, Dropdown } from "react-bootstrap";
-import logo from "../../../assets/img/logo/logo.png";
+import logo from "../../../assets/img/logo/asela_garage_exact.png";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 import { FaUserCircle, FaEdit, FaSignOutAlt } from "react-icons/fa";
@@ -22,7 +22,7 @@ function Header() {
         <div className="container-fluid d-flex justify-content-between align-items-center">
           <div className="left-column d-flex align-items-center">
             <div className="text me-4">
-              Schedule Appointment: <strong>1800 456 7890</strong>
+              Schedule Appointment: <strong>+251909090909</strong>
             </div>
             <div className="office-hour me-4">
               Monday - Saturday 7:00AM - 6:00PM
@@ -99,12 +99,34 @@ function Header() {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="custom-dropdown bg-light">
-                    <Dropdown.Item
-                      onClick={() => navigate("/edit-profile")}
+                    {/* <Dropdown.Item
+                      onClick={() => navigate("/dashboard")}
                       className="d-flex align-items-center text-primary"
                     >
-                      <FaEdit className="me-2" /> Edit Profile
-                    </Dropdown.Item>
+                      <FaEdit className="me-2" /> DashBoard
+                    </Dropdown.Item> */}
+
+                    <Dropdown.Item
+                      onClick={() => {
+                        const user = JSON.parse(
+                          localStorage.getItem("employee"),
+                        );
+                        const role = user?.employee_role;
+
+                        if (role === 3) {
+                          navigate("/admin");
+                        } else if (role === 2) {
+                          navigate("/manager");
+                        } else if (role === 1) {
+                          navigate("/employees");
+                        } else {
+                          navigate("/customers");
+                        }
+                      }}
+                      className="d-flex align-items-center text-primary"
+                    >
+                      <FaEdit className="me-2" /> DashBoard
+                    </Dropdown.Item>  
                     <Dropdown.Divider />
                     <Dropdown.Item
                       onClick={handleLogout}

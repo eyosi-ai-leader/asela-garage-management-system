@@ -16,7 +16,7 @@ function EmployeeMenu() {
     <div className="employee-menu">
       <h2>Employee Menu</h2>
       <div className="list-group">
-        <Link to="/employee" className="list-group-item">
+        <Link to="/employees" className="list-group-item">
           <FaTachometerAlt className="icon" /> Dashboard
         </Link>
         <Link to="/employee/tasks" className="list-group-item">

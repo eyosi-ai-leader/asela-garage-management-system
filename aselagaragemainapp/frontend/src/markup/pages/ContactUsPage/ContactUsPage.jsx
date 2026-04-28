@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import HeaderPage from '../HeaderPage/HeaderPage';
-import img9 from "../../../Assets/abe/banner1.jpg";
+import img9 from "../../../Assets/Asela/banner1.jpg";
 import img10 from "../../../Assets/img/icons/10.png";
 import img11 from "../../../Assets/img/icons/11.png";
 import img12 from "../../../Assets/img/icons/12.png";
