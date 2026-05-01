@@ -20,7 +20,6 @@ function AdminMenu() {
   const [isOrdersOpen, setIsOrdersOpen] = useState(false);
   const [isEmployeesOpen, setIsEmployeesOpen] = useState(false);
   const [isCustomersOpen, setIsCustomersOpen] = useState(false);
-  const [isItemsOpen, setIsItemsOpen] = useState(false); // State for items menu
 
   // Function to toggle the services sub-menu
   const toggleServicesMenu = () => {
@@ -42,10 +41,7 @@ function AdminMenu() {
     setIsCustomersOpen(!isCustomersOpen);
   };
 
-  // Function to toggle the items sub-menu
-  const toggleItemsMenu = () => {
-    setIsItemsOpen(!isItemsOpen);
-  };
+ 
 
   return (
     <div className="admin-menu">
@@ -56,14 +52,24 @@ function AdminMenu() {
         </Link>
 
         {/* Orders menu item with toggle functionality */}
-        {/* <div className="list-group-item" onClick={toggleOrdersMenu}>
+        <div className="list-group-item" onClick={toggleOrdersMenu}>
           <FaBox className="icon" /> Orders
           <span className="expand-icon">
             {isOrdersOpen ? <FaAngleUp /> : <FaAngleDown />}
           </span>
-        </div> */}
+        </div>
 
         {/* Conditional rendering of orders sub-menu items */}
+        {isOrdersOpen && (
+          <div className="sub-menu">
+            <Link to="/admin/add-order" className="list-group-item">
+              <FaPlus className="icon" /> Add Order
+            </Link>
+            <Link to="/admin/orders" className="list-group-item">
+              <FaCog className="icon" /> View Orders
+            </Link>
+          </div>
+        )}
 
         {/* Employees menu item with toggle functionality */}
         <div className="list-group-item" onClick={toggleEmployeesMenu}>
@@ -121,26 +127,6 @@ function AdminMenu() {
             </Link>
             <Link to="/admin/customers" className="list-group-item">
               <FaCog className="icon" /> View Customers
-            </Link>
-          </div>
-        )}
-
-        {/* Items menu item with toggle functionality */}
-        <div className="list-group-item" onClick={toggleItemsMenu}>
-          <FaBox className="icon" /> Items
-          <span className="expand-icon">
-            {isItemsOpen ? <FaAngleUp /> : <FaAngleDown />}
-          </span>
-        </div>
-
-        {/* Conditional rendering of items sub-menu items */}
-        {isItemsOpen && (
-          <div className="sub-menu">
-            <Link to="/admin/add-item" className="list-group-item">
-              <FaPlus className="icon" /> Add Item
-            </Link>
-            <Link to="/admin/items" className="list-group-item">
-              <FaCog className="icon" /> View Items
             </Link>
           </div>
         )}

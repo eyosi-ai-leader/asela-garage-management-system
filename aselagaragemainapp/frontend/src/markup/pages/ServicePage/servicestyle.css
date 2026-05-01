@@ -1,0 +1,70 @@
+.ltn__secondary-color {
+  color: #0B5ED7 !important;
+}
+
+.ltn__secondary-color i {
+  color: #0B5ED7 !important;
+}
+
+/* FORCE ALL SECONDARY TEXT TO BLUE */
+.ltn__secondary-color,
+.ltn__secondary-color * {
+  color: #0B5ED7 !important;
+}
+
+/* FORCE ICON COLORS */
+.service-item-icon i {
+  color: #0B5ED7 !important;
+}
+
+/* ALSO TARGET FONT AWESOME ICONS */
+.service-item-icon i::before {
+  color: #0B5ED7 !important;
+}
+
+
+/* PRIMARY BRAND COLOR */
+:root {
+  --main-color: #0B5ED7;
+}
+
+/* FORCE ALL SECONDARY TEXT */
+.ltn__secondary-color,
+.ltn__secondary-color *,
+.ltn__secondary-color:hover,
+.ltn__secondary-color *:hover {
+  color: var(--main-color) !important;
+}
+
+/* FIX LINKS (VERY IMPORTANT) */
+a,
+a:hover,
+a:focus,
+a:active {
+  color: var(--main-color) !important;
+  text-decoration: none;
+}
+
+/* SERVICE TITLES HOVER */
+.ltn__service-item-2 h3 a,
+.ltn__service-item-2 h3 a:hover {
+  color: var(--main-color) !important;
+}
+
+/* ICONS */
+.service-item-icon i,
+.service-item-icon i::before {
+  color: var(--main-color) !important;
+}
+
+/* BLOG LINKS */
+.ltn__blog-title a,
+.ltn__blog-title a:hover {
+  color: var(--main-color) !important;
+}
+
+/* BUTTONS / READ MORE */
+.ltn__blog-btn a,
+.ltn__blog-btn a:hover {
+  color: var(--main-color) !important;
+}

@@ -3,6 +3,7 @@ const api_url = import.meta.env.VITE_API_URL;
 import React, { useEffect, useState } from "react";
 import img1 from "../../../Assets/img/Gif.gif";
 import img2 from "../../../Assets/img/10001.jpg";
+// import "./servicestyle.css";
 function ServicePage() {
   const [blogs, setBlogs] = useState([]);
 

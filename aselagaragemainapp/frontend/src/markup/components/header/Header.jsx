@@ -111,7 +111,13 @@ function Header() {
                         const user = JSON.parse(
                           localStorage.getItem("employee"),
                         );
-                        const role = user?.employee_role;
+
+                        if (!user) {
+                          navigate("/login");
+                          return;
+                        }
+
+                        const role = Number(user.employee_role);
 
                         if (role === 3) {
                           navigate("/admin");
@@ -126,8 +132,9 @@ function Header() {
                       className="d-flex align-items-center text-primary"
                     >
                       <FaEdit className="me-2" /> DashBoard
-                    </Dropdown.Item>  
+                    </Dropdown.Item>
                     <Dropdown.Divider />
+
                     <Dropdown.Item
                       onClick={handleLogout}
                       className="d-flex align-items-center text-primary"

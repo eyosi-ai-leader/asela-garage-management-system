@@ -55,42 +55,44 @@ function LoginForm() {
       const response = await loginService.logIn(formData);
       const data = await response.json();
 
-      // if (data.status === "success") {
-      //   if (data.data.employee_token) {
-      //     console.log(data.data);
-      //     localStorage.setItem("employee", JSON.stringify(data.data));
-      //     setIsLogged(true);
-      //     setEmployee(data.data);
-      //     setIsAdmin(data.data.employee_role === 3); 
-          
-      //     // Set admin status
-      //     navigate("/"); // Default navigation for other roles
-      //   }
-      // }
-
-      
       if (data.status === "success") {
         if (data.data.employee_token) {
           console.log(data.data);
           localStorage.setItem("employee", JSON.stringify(data.data));
           setIsLogged(true);
           setEmployee(data.data);
-          setIsAdmin(data.data.employee_role === 3); // keep your original logic
-
-          const role = data.data.employee_role;
-
-          // 🔥 ONLY NEW PART
-          if (role === 3) {
-            navigate("/admin");
-          } else if (role === 2) {
-            navigate("/manager");
-          } else if (role === 1) {
-            navigate("/employees");
-          } else {
-            navigate("/customers");
-          }
+          setIsAdmin(data.data.employee_role === 3); 
+          
+          // Set admin status
+          navigate("/"); // Default navigation for other roles
         }
-      } else {
+      }
+
+      
+      // if (data.status === "success") {
+      //   if (data.data.employee_token) {
+      //     console.log(data.data);
+      //     localStorage.setItem("employee", JSON.stringify(data.data));
+      //     setIsLogged(true);
+      //     setEmployee(data.data);
+      //     setIsAdmin(data.data.employee_role === 3); // keep your original logic
+
+      //     const role = data.data.employee_role;
+
+      //     // 🔥 ONLY NEW PART
+      //     if (role === 3) {
+      //       navigate("/admin");
+      //     } else if (role === 2) {
+      //       navigate("/manager");
+      //     } else if (role === 1) {
+      //       navigate("/employees");
+      //     } else {
+      //       navigate("/customer");
+      //     }
+      //   }
+      // }
+      
+       else {
         setServerError(data.message);
       }
     }
@@ -153,6 +155,8 @@ function LoginForm() {
         </Col>
       </Row>
     </Container>
+
+    
   );
 }
 

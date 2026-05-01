@@ -185,7 +185,7 @@ function AddVehicleForm({ show, handleClose, customerId }) {
               <Form.Group>
                 <Form.Control
                   type="text"
-                  placeholder="Serial"
+                  placeholder="Plate"
                   value={vehicle_serial}
                   onChange={(e) => setSerial(e.target.value)}
                   isInvalid={!!serverError}

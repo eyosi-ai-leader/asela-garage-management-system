@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Form, Button, Col, Row, Alert } from "react-bootstrap";
 import customerService from "../../../../services/customer.service";
 import { useAuth } from "../../../../context/AuthContext";
-import AddVehicleForm from "../AddVehicleForm/AddVehicleForm"; // Adjust the path as needed
+import AddVehicleForm from "../AddVehicleForm/AddVehicleForm";
+import { useNavigate } from "react-router-dom";
 
 function AddCustomerForm() {
   const [customer_email, setEmail] = useState("");
@@ -12,7 +13,7 @@ function AddCustomerForm() {
   const [customer_password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showVehicleForm, setShowVehicleForm] = useState(false);
-  const [customerId, setCustomerId] = useState(null); // State to store customer ID
+  const [customerId, setCustomerId] = useState(null);
   const { customer } = useAuth();
   const token = customer ? customer.customer_token : null;
 
@@ -21,6 +22,8 @@ function AddCustomerForm() {
   const [passwordError, setPasswordError] = useState("");
   const [success, setSuccess] = useState(false);
   const [serverError, setServerError] = useState("");
+const navigate = useNavigate();
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -80,15 +83,13 @@ function AddCustomerForm() {
       }
 
       const { customer_id } = response;
-      setCustomerId(customer_id); // Set the customer ID
+      setCustomerId(customer_id);
 
       setSuccess(true);
       setServerError("");
       setLoading(false);
-      setTimeout(() => {
-        setSuccess(false);
-        setShowVehicleForm(true); // Show the vehicle form
-      }, 2000);
+
+      // ❌ REMOVED forced vehicle popup
     } catch (error) {
       setServerError(error.message);
       setLoading(false);
@@ -106,9 +107,26 @@ function AddCustomerForm() {
           style={{ width: "100%", maxWidth: "600px" }}
         >
           <h2 className="text-center mb-4">Add a New Customer</h2>
+
           {serverError && <Alert variant="danger">{serverError}</Alert>}
-          {success && !showVehicleForm && (
-            <Alert variant="success">Customer added successfully!</Alert>
+
+          {success && (
+            <Alert variant="success">
+              Customer added successfully! Would you like to add a vehicle?
+            </Alert>
+          )}
+
+          {/* ✅ NEW BUTTON (optional vehicle add) */}
+          {success && customerId && (
+            <div className="text-center mb-3">
+              <Button className="me-2" onClick={() => setShowVehicleForm(true)}>
+                Add Vehicle
+              </Button>
+
+              <Button variant="secondary" onClick={() => navigate("/admin")}>
+                No Thanks, Later
+              </Button>
+            </div>
           )}
           <Form onSubmit={handleSubmit}>
             <Row>
@@ -157,7 +175,7 @@ function AddCustomerForm() {
                 <Form.Group className="mb-3">
                   <Form.Control
                     type="text"
-                    placeholder="Customer Phone (555-555-5555)"
+                    placeholder="Customer Phone (+251911234534)"
                     value={customer_phone_number}
                     onChange={(e) => setPhone(e.target.value)}
                   />

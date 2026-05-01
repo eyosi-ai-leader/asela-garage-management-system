@@ -1076,7 +1076,13 @@ dl dd {
 .max-w1000 {
     max-width: 1000px;
 }
+.ltn__secondary-color {
+  color: #0B5ED7 !important;
+}
 
+.ltn__secondary-color i {
+  color: #0B5ED7 !important;
+}
 /*---------------------------------------------------------------
 7. POSITIONS ( absolute & relative & statice & z-index )
 ---------------------------------------------------------------*/
@@ -10337,6 +10343,14 @@ ol.commentlist li .star-rating {
 .item-widgets-body .item-title,
 .item-widgets-body .item-price del{
 	font-size:15px;
+}
+
+.ltn__secondary-color {
+  color: #0B5ED7 !important;
+}
+
+.ltn__secondary-color i {
+  color: #0B5ED7 !important;
 }
 /* product item size */
 .product-item-size .btn {
