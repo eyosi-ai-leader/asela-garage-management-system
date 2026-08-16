@@ -23,9 +23,9 @@ The application includes **role-based access control** for administrators, manag
 
 ![Management](screenshots/management.png)
 
-### 🚗 Vehicle & Service Management
+### 🚗 Vehicle & Service Feedback
 
-![Vehicles and Services](screenshots/vehicles-services.png)
+![Vehicles and Services](screenshots/feedback.png)
 
 ### 📋 Service Orders & Tasks
 
