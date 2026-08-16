@@ -203,22 +203,9 @@ This is mainly used for areas such as:
 
 ---
 
-## 🗄️ Database
+🗄️ Database
 
-The system uses **MySQL** as its relational database.
-
-The database manages information including:
-
-* Users
-* Customers
-* Employees
-* Vehicles
-* Services
-* Service orders
-* Tasks
-* Feedback
-* Authentication-related data
-
+The system uses MySQL to manage users, customers, employees, vehicles, services, service orders, tasks, feedback, and authentication data.
 The production database is hosted on **Aiven MySQL**.
 
 ---
