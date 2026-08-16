@@ -13,7 +13,7 @@ The application includes **role-based access control** for administrators, manag
 
 ### 🔐 Authentication
 
-![Login](screenshots/login)
+![Login](screenshots/login.png)
 
 ### 📊 Dashboard
 
